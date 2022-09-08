@@ -21,6 +21,29 @@
     姓名：<input type="text" name="myName">
     年龄：<input type="text" name="age">
     <input type="submit" value="提交">
-</form>
+</form><br>
+
+<h2>2.对象封装数据提交</h2>
+<form action="${pageContext.request.contextPath}/two.action" method="post">
+    姓名：<input type="text" name="name">
+    年龄：<input type="text" name="age">
+    <input type="submit" value="提交">
+</form><br>
+<h2>3.动态占位符提交</h2>
+<a href="${pageContext.request.contextPath}/three/张三/22.action">动态提交</a>
+<br>
+<h2>4.参数名称不一致解决方案</h2>
+<form action="${pageContext.request.contextPath}/four.action" method="post">
+    姓名：<input type="text" name="name">
+    年龄：<input type="text" name="age">
+    <input type="submit" value="提交">
+</form><br>
+<h2>5.手工提取数据</h2>
+<form action="${pageContext.request.contextPath}/five.action" method="post">
+    姓名：<input type="text" name="name">
+    年龄：<input type="text" name="age">
+    <input type="submit" value="提交">
+</form><br>
+<br>
 </body>
 </html>

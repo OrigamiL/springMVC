@@ -4,16 +4,20 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springMVC001" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc002" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc003" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_demo" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springMVC001/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc002/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc003/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
