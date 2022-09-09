@@ -36,6 +36,17 @@
 <a href="${pageContext.request.contextPath}/one.action">1.请求转发页面(默认)</a><br>
 <a href="${pageContext.request.contextPath}/two.action">2.请求转发action</a><br>
 <a href="${pageContext.request.contextPath}/three.action">3.重定向页面</a><br>
-<a href="${pageContext.request.contextPath}/four.action">4.重定向action</a><br>
+<a href="${pageContext.request.contextPath}/four.action">4.重定向action</a>
+<br><br><br>
+<a href="${pageContext.request.contextPath}/data.action?name=zar">访问服务器，进行数据携带跳转</a>
+<br><br><br>
+<form action="${pageContext.request.contextPath}/date.action" method="post">
+    日期：<input type="date" name="date">
+    <input type="submit" value="提交">
+</form><br>
+<form action="${pageContext.request.contextPath}/date2.action" method="post">
+    日期：<input type="date" name="date2">
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>

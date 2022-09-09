@@ -35,4 +35,5 @@ public class JumpAction {
         System.out.println("重定向action");
         return "redirect:other.action";
     }
+
 }
