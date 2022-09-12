@@ -10,6 +10,7 @@
         <module name="springMVC001" />
         <module name="springmvc_demo" />
         <module name="springmvc002" />
+        <module name="springmvc004" />
         <module name="springmvc003" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="springMVC001" options="" />
       <module name="springmvc002" options="" />
       <module name="springmvc003" options="" />
+      <module name="springmvc004" options="" />
       <module name="springmvc_demo" options="" />
     </option>
   </component>

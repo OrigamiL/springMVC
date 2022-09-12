@@ -47,6 +47,7 @@
 <form action="${pageContext.request.contextPath}/date2.action" method="post">
     日期：<input type="date" name="date2">
     <input type="submit" value="提交">
-</form>
+</form><br><br>
+<a href="${pageContext.request.contextPath}/date3.action">显示集合中对象的日期成员</a>
 </body>
 </html>

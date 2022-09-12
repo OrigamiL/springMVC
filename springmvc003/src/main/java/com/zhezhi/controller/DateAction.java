@@ -1,5 +1,6 @@
 package com.zhezhi.controller;
 
+import com.zhezhi.pojo.Students;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
@@ -9,8 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @Program: springMVC
@@ -56,5 +60,20 @@ public class DateAction {
         System.out.println(date2);
         request.setAttribute("date2",new SimpleDateFormat("yyyy-MM-dd").format(date2));
         return "show";
+    }
+    @RequestMapping("/date3.action")
+    public String list(HttpServletRequest request) throws ParseException {
+        Students student1 = new Students("张三",
+                new SimpleDateFormat("yyyy-MM-dd").parse("2000-10-1"));
+        Students student2 = new Students("李四",
+                new SimpleDateFormat("yyyy-MM-dd").parse("2011-09-10"));
+        Students student3 = new Students("王五",
+                new SimpleDateFormat("yyyy-MM-dd").parse("2008-03-22"));
+        List<Students> list = new ArrayList<>();
+        list.add(student1);
+        list.add(student2);
+        list.add(student3);
+        request.setAttribute("studentList",list);
+        return "show2";
     }
 }

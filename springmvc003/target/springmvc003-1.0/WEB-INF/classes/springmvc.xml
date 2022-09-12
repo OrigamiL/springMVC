@@ -11,7 +11,6 @@
         <property name="prefix" value="/admin/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-    <!--不用添加视图解析器，因为处理的是ajax请求-->
     <!--必须添加注解驱动-->
     <mvc:annotation-driven/>
 </beans>
