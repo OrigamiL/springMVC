@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <context:component-scan base-package="com.zhezhi.controller"/>
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <mvc:annotation-driven/>
+    <!--注册拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--映射要拦截的请求-->
+            <mvc:mapping path="/**"/>
+            <!--设置放行的请求-->
+            <mvc:exclude-mapping path="/showLogin.action"/>
+            <mvc:exclude-mapping path="/login.action"/>
+            <!--配置具体拦截器实现功能的类-->
+            <bean class="com.zhezhi.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    <!--
+    SpringMVC的拦截器
+    针对请求和响应进行的额外的处理，在请求和响应的过程中添加预处理，后处理和最终处理
+    拦截器执行的时机：
+    1.preHandle():在请求被处理之前进行操作，预处理
+    2.postHandle():在请求被处理之后，但结果还没有渲染前进行操作，可以改变响应的结果，后处理
+    3.afterCompletion():所有的请求响应结束后执行善后操作，清理对象，关闭资源，最终处理。
+    拦截器实现方式：实现HandlerInterceptor接口
+    -->
+</beans>
