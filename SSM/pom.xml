@@ -1,9 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.zhezhi</groupId>
   <artifactId>SSM</artifactId>
-  <packaging>war</packaging>
   <version>1.0</version>
 
   <properties>
@@ -20,7 +19,7 @@
     <!--数据库依赖-->
     <mysql.version>8.0.30</mysql.version>
     <!--日志依赖-->
-    <slf4j.version>1.6.4</slf4j.version>
+    <slf4j.version>2.0.0</slf4j.version>
     <!--数据库连接池依赖-->
     <druid.version>1.2.12</druid.version>
     <!--分页插件的依赖-->
@@ -49,7 +48,7 @@
       <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <dependency>
+   <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
       <version>${spring.version}</version>
@@ -161,6 +160,16 @@
       <artifactId>lombok</artifactId>
       <version>1.18.24</version>
     </dependency>
+<!--    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>-->
   </dependencies>
 
 
@@ -181,20 +190,18 @@
     <!--识别所有配置文件-->
     <resources>
       <resource>
-        <directory>/src/main/java</directory>
+        <directory>src/main/java</directory>
         <includes>
-          <include>**/*/xml</include>
+          <include>**/*.xml</include>
           <include>**/*.properties</include>
         </includes>
-        <filtering>false</filtering>
       </resource>
       <resource>
-        <directory>/src/main/resources</directory>
+        <directory>src/main/resources</directory>
         <includes>
-          <include>**/*/xml</include>
+          <include>**/*.xml</include>
           <include>**/*.properties</include>
         </includes>
-        <filtering>false</filtering>
       </resource>
     </resources>
   </build>
