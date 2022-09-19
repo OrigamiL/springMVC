@@ -9,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @Program: springMVC
@@ -33,8 +34,11 @@ public class MyTest {
     * */
     @Test
     public void testSelectUserPage() {
-        List<User> userList = userService.selectUserPage("张松浩", "", 0);
+        List<User> userList = userService.selectUserPage("", "", 5);
         userList.forEach(System.out::println);
+        String userID = (System.currentTimeMillis()+String.valueOf(Math.random()*1000000)).substring(0,17);
+        String s = String.valueOf(Math.random()*1000000);
+        System.out.println(s);
     }
 
     @Test

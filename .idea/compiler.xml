@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springMVC001" />
-        <module name="springmvc_demo" />
         <module name="springmvc002" />
-        <module name="SSM" />
         <module name="springmvc004" />
         <module name="springmvc003" />
+        <module name="springmvc_demo" />
+        <module name="SSM" />
+        <module name="SSMpractise" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SSM" options="" />
+      <module name="SSMpractise" options="" />
       <module name="springMVC001" options="" />
       <module name="springmvc002" options="" />
       <module name="springmvc003" options="" />
