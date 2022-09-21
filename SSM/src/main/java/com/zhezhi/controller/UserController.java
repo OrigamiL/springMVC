@@ -4,6 +4,7 @@ import com.zhezhi.pojo.User;
 import com.zhezhi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +21,7 @@ import java.util.UUID;
  * @Create-Date: 2022-09-19 10:07
  **/
 
+@CrossOrigin//在服务器端支持跨服访问
 @RestController//如果本类中全部都是ajax请求，则使用此注解，方法上的@ResponseBody可不写
 @RequestMapping("/user")
 public class UserController {
